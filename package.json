@@ -10,11 +10,12 @@
     },
     "readmeFilename": "README.md",
     "dependencies": {
+        "request": "*",
         "co-request": "*",
-        "codash": "*",
-        "co-stream": "*"
+        "codash": "*"
     },
     "devDependencies": {
-        "co": "*"
+        "co": "*",
+        "co-stream": "*"
     }
 }
