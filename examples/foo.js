@@ -8,8 +8,8 @@ co(function *() {
     var client = new WebHdfsClient({ namenode_hosts: ['10.10.0.141', '10.10.0.140'] });
 
     var home = yield* client.getHomeDirectory();
-    //var files = yield* client.listStatus(home);
-    //console.log(_.map(files, function (f) { return f.pathSuffix }));
+    var files = yield* client.listStatus(home);
+    console.log(_.map(files, function (f) { return f.pathSuffix }));
 
     yield* client.mkdirs(home + '/tmp');
 
