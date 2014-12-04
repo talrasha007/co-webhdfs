@@ -33,6 +33,9 @@ co(function *() {
     for (var line; line = yield* reader.read();) {
         console.log('line: ', line);
     }
-})(function (err) {
-    console.log(err || 'finished');
+}).then(function () {
+    console.log('finished...');
+}, function (err) {
+    console.log(err);
+    console.log(err.stack);
 });

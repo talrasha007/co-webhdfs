@@ -1,21 +1,21 @@
 {
-    "name": "co-webhdfs",
-    "version": "0.0.2",
-    "homepage": "https://github.com/talrasha007/co-webhdfs",
-    "repository": "https://github.com/talrasha007/co-webhdfs.git",
-    "description": "A co style webhdfs client.",
-    "main": "lib/index.js",
-    "engines": {
-        "node": ">=0.11.0"
-    },
-    "readmeFilename": "README.md",
-    "dependencies": {
-        "request": "*",
-        "co-request": "*",
-        "codash": "*"
-    },
-    "devDependencies": {
-        "co": "*",
-        "co-stream": "*"
-    }
+  "name": "co-webhdfs",
+  "version": "0.1.0",
+  "homepage": "https://github.com/talrasha007/co-webhdfs",
+  "repository": "https://github.com/talrasha007/co-webhdfs.git",
+  "description": "A co style webhdfs client.",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=0.11.0"
+  },
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "co-request": "~0.2.0",
+    "codash": "*",
+    "request": "~2.49.0"
+  },
+  "devDependencies": {
+    "co": "^4.0.0",
+    "co-stream": "*"
+  }
 }
