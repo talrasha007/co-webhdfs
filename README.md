@@ -1,6 +1,6 @@
 #co-webhdfs
   A webhdfs client in [co](https://github.com/tj/co) style.
-  
+
 ##NOTE:
   - Node verion should >= 0.11.0
   - For more information about co, take a look at [document for co](https://github.com/visionmedia/co)
@@ -21,6 +21,8 @@ var _ = require('codash'),
 
 co(function *() {
     var client = new WebHdfsClient({ namenode_hosts: ['10.10.0.141', '10.10.0.140'] });
+    // Or, if you don't want to enable failover:
+    // var client = new WebHdfsClient({ namenode_host: '10.10.0.140' });
 
     var home = yield* client.getHomeDirectory();
     //var files = yield* client.listStatus(home);
