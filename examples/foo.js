@@ -5,17 +5,18 @@ var _ = require('codash'),
     WebHdfsClient = require('../');
 
 co(function *() {
-    var client = new WebHdfsClient({ namenode_host: '10.10.0.140' });
+    var client = new WebHdfsClient({ namenode_hosts: ['10.10.0.141', '10.10.0.140'] });
 
     var home = yield* client.getHomeDirectory();
-    var files = yield* client.listStatus(home);
-    console.log(_.map(files, function (f) { return f.pathSuffix }));
+    //var files = yield* client.listStatus(home);
+    //console.log(_.map(files, function (f) { return f.pathSuffix }));
 
     yield* client.mkdirs(home + '/tmp');
 
     var filename = home + '/tmp/foo.txt';
 
     // Data style.
+    yield* client.del(filename);
     yield* client.create(filename, 'foooooo\n', { overwrite: true });
     yield* client.append(filename, 'barr\n');
     console.log(yield* client.open(filename));
