@@ -1,6 +1,7 @@
 {
   "name": "co-webhdfs",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "license": "MIT",
   "homepage": "https://github.com/talrasha007/co-webhdfs",
   "repository": "https://github.com/talrasha007/co-webhdfs.git",
   "description": "A co style webhdfs client.",
@@ -11,7 +12,7 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "co-request": "~0.2.0",
-    "codash": "*",
+    "co-lodash": "*",
     "request": "~2.49.0"
   },
   "devDependencies": {

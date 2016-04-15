@@ -13,7 +13,7 @@ npm install co-webhdfs
 
 ##Usage:
 ```js
-var _ = require('codash'),
+var _ = require('co-lodash'),
     co = require('co'),
     LineReader = require('co-stream').LineReader,
     Writer = require('co-stream').Writer,
