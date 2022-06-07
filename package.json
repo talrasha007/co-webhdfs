@@ -13,7 +13,7 @@
   "dependencies": {
     "co-request": "~0.2.0",
     "co-lodash": "*",
-    "request": "~2.49.0"
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "co": "^4.0.0",
